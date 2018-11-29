@@ -80,10 +80,3 @@ def get_comment_product_id_set():
         dirs.append(dir_name)
     dirs = set(dirs)
     return dirs
-
-
-def move_file_to_dir():
-    dirs = os.listdir('comment_json_pages/')
-    os.path.isdir()
-
-parse_comment_detail()
