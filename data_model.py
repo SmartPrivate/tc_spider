@@ -32,3 +32,30 @@ class CommentMain(Base):
     mid_count=Column(Integer)
     bad_count=Column(Integer)
     with_photo_count=Column(Integer)
+
+class CommentDetail(Base):
+    __tablename__='t_comment_detail'
+
+    sid=Column(Integer,primary_key=True)
+    guid=Column(VARCHAR(36))
+    product_id=Column(Integer)
+    comment_source=Column(Integer)
+    dp_site=Column(VARCHAR(100))
+    walk_aim=Column(VARCHAR(100))
+    content=Column(TEXT)
+    image_count=Column(Integer)
+    rating=Column(VARCHAR(10))
+    dp_date=Column(DATETIME)
+    is_elite=Column(BOOLEAN)
+    item_name=Column(TEXT)
+    prize_jiangjin=Column(FLOAT)
+    user_level=Column(Integer)
+    user_name=Column(VARCHAR(100))
+    vote_count=Column(Integer)
+
+class CommentImage(Base):
+    __tablename__='t_comment_image'
+
+    sid=Column(Integer,primary_key=True)
+    guid=Column(VARCHAR(36))
+    pic_url=Column(TEXT)
