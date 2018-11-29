@@ -21,3 +21,14 @@ class ProductMain(Base):
     purchased_count = Column(Integer)
     comment_count = Column(Integer)
     least_price = Column(FLOAT)
+
+class CommentMain(Base):
+    __tablename__='t_comment_main'
+
+    sid=Column(Integer,primary_key=True)
+    product_id=Column(Integer)
+    comment_count=Column(Integer)
+    good_count=Column(Integer)
+    mid_count=Column(Integer)
+    bad_count=Column(Integer)
+    with_photo_count=Column(Integer)
