@@ -43,6 +43,28 @@ class CommentDetail(Base):
     dp_site=Column(VARCHAR(100))
     walk_aim=Column(VARCHAR(100))
     content=Column(TEXT)
+    image_urls=Column(TEXT)
+    image_count=Column(Integer)
+    rating=Column(VARCHAR(10))
+    dp_date=Column(DATETIME)
+    is_elite=Column(BOOLEAN)
+    item_name=Column(TEXT)
+    prize_jiangjin=Column(FLOAT)
+    user_level=Column(Integer)
+    user_name=Column(VARCHAR(100))
+    vote_count=Column(Integer)
+
+class CommentDetailMerged(Base):
+    __tablename__='t_comment_detail_merged'
+
+    sid=Column(Integer,primary_key=True)
+    guid=Column(VARCHAR(36))
+    product_id_group=Column(TEXT)
+    comment_source=Column(Integer)
+    dp_site=Column(VARCHAR(100))
+    walk_aim=Column(VARCHAR(100))
+    content=Column(TEXT)
+    image_urls=Column(TEXT)
     image_count=Column(Integer)
     rating=Column(VARCHAR(10))
     dp_date=Column(DATETIME)

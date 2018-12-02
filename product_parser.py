@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
-import db_tools.db_tool as db_tool
-import db_tools.data_model as data_model
+import db_tool
+import data_model
 import os
 
 def parse_list_page_to_data_model(file_name):
